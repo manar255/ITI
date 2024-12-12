@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,
+        td,
+        tr,
+        th {
+            border: 2px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <caption>Fruits</caption>
+        <tr>
+            <th>Fruit</th>
+            <th>Price</th>
+            <th>Origin</th>
+        </tr>
+        <tr>
+            <td>Apple</td>
+            <td>5$</td>
+            <td>true</td>
+
+        </tr>
+        <tr>
+            <td>Banana</td>
+            <td>6$</td>
+            <td>true</td>
+
+        </tr>
+        <tr>
+            <td>orange</td>
+            <td>8$</td>
+            <td>true</td>
+
+        </tr>
+    </table>
+    <table>
+        <caption>Event</caption>
+        <tr>
+            <th>Speaker</th>
+            <th>Topic</th>
+            <th colspan="2">Time</th>
+        </tr>
+        <tr>
+            <td>Ahmed</td>
+            <td>hr</td>
+            <td colspan="2">3:30 - 5:00</td>
+
+        </tr>
+        <tr>
+            <td>Ali</td>
+            <td>PR</td>
+            <td>1:00 - 3:00</td>
+            <td>3:30 - 5:00</td>
+
+        </tr>
+        <tr>
+            <td rowspan="2">Manar</td>
+            <td>js</td>
+            <td colspan="2">2:00 - 5:00</td>
+        </tr>
+        <tr>
+
+            <td>node js</td>
+            <td colspan="2">5:00 - 7:30</td>
+        </tr>
+    </table>
+    <table>
+        <caption>the schedule of classes for a week</caption>
+        <thead>
+            <tr>
+                
+                <th colspan="2">
+                    sat
+                </th>
+                <th>
+                    sun
+                </th>
+                <th>
+                    mon
+                </th>
+                <th>
+                    tue
+                </th>
+                <th>
+                    wen
+                </th>
+                <th>
+                    thu
+                </th>
+                <th>
+                    fri
+                </th>
+
+
+            </tr>
+
+        </thead>
+        <tbody>
+            <tr >
+                <td>
+                    Morning
+                </td>
+                <td>Afternoon</td>
+            </tr>
+            <tr>
+                <td>
+                    Math
+                </td>
+                <td>Arabic</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <form action="get">
+        <fieldset>
+            <legend>Form</legend>
+            <Label>text</Label>
+            <input type="text" required minlength="5" maxlength="500">
+            <br>
+
+            <Label>password</Label>
+            <input type="password" required>
+            <br>
+
+            <Label>email</Label>
+            <input type="email" required placeholder="enter your email">
+            <br>
+
+            <Label>radio1</Label>
+            <input type="radio" name="x" required>
+            <Label>radio2</Label>
+            <input type="radio" name="x" required>
+            <Label>radio1</Label>
+            <input type="radio" name="x" required>
+            <br>
+            <Label>number</Label>
+            <input type="number" required>
+            <br>
+            <Label>range</Label>
+            <input type="range" min="5" max="100" step="5">
+            <br>
+            <label for="">select track</label>
+            <select name="y" id="y" >
+                <optgroup label="backend">
+                    <option value="backend">node js</option>
+                    <option value="backend">.Net</option>
+                </optgroup>
+                <optgroup label="frontend">
+                    <option value="backend">Anglure</option>
+                    <option value="backend">react</option>
+                </optgroup>
+            </select>
+            <br>
+            <Label>color</Label>
+            <input type="color" >
+            <br>
+            <Label>files</Label>
+            <input type="file" multiple >
+            <br>
+            <input type="button" value="cilck">
+            <input type="reset">
+            <input type="submit" >
+
+        </fieldset>
+    </form>
+</body>
+
+</html>

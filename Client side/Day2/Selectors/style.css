@@ -1,0 +1,89 @@
+/* task 1 */
+/* p::first-letter{
+    color: brown;
+}
+ p{
+    color: aqua;
+    background-color: blanchedalmond;
+ } */
+
+
+
+/* task 2 */
+/* ul>li{
+    background-color: aquamarine;
+ } */ 
+
+/* task 3 */
+ /* div p{
+    color: red;
+ } */
+
+
+/* task 4 */
+img[alt]{
+width: 500px;
+}
+img[alt='test']{
+    border: 5px solid red;
+}
+img[alt~='flower']{
+    border: 5px solid rgb(0, 217, 255);
+}
+img[alt|='flower']{
+    border: 5px solid rgb(212, 0, 255);
+}
+img[alt^='flower']{
+    border: 5px solid rgb(0, 38, 255);
+}
+img[alt$='flower']{
+    border: 5px solid rgb(102, 255, 0);
+}
+img[alt*='flower']{
+    border: 5px solid rgb(0, 255, 170);
+}
+
+/* task 5 */
+
+a:link {
+    color: #FF0000;
+}
+
+a:visited {
+    color: #00FF00;
+}
+
+p:hover,
+a:hover {
+    color: #FF00FF;
+}
+
+a:active {
+    color: #0000FF;
+}
+
+ul li:nth-child(3) {
+    color: #FF00FF;
+}
+p:hover::first-line{
+    background-color:#0000FF ;
+}
+div div p::after {
+    content: '  text';
+    color: #FF0000;
+}
+
+/* task 6 */
+/* input:disabled{
+    background-color: rgb(204, 153, 153);
+} */
+/* input:focus{
+    background-color: rgb(15, 13, 129);
+} */
+
+
+/* task 7 */
+input[type="checkbox"]:checked ~ p {
+    background-color: rgba(0, 124, 128, 0.5);
+ 
+  }
