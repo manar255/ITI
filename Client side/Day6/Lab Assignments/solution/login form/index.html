@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <title>Document</title>
+  </head>
+  <body class="p-5">
+    <form action="./welcome.html" class="d-flex flex-column gap-2 border p-5">
+      <label for="">User name: </label>
+      <input
+        type="text"
+        name="username"
+        placeholder="Enter your user name here"
+        onfocus="addFocusStyle()"
+        onblur="validFName()"
+        id="fName"
+        required
+      />
+      <span id="inv" class="invalid-feedback">invalid name</span>
+      <span id="invN" class="invalid-feedback" style="display: none"
+        >invalid name</span
+      >
+
+      <label for="">Email: </label>
+      <input type="email" required />
+
+      <label for="">City</label>
+      <select name="city" id="city">
+        <option value="cairo">cairo</option>
+        <option value="qena">qena</option>
+        <option value="alex">alex</option>
+        <option value="assute">assute</option>
+      </select>
+
+      <label for=""> Password:</label>
+      <input type="password" id="pass" name="password" required />
+
+      <label for=""> Confirm Password:</label>
+      <input type="password" id="cPass" onblur="validatePassword()" />
+      <span id="preq" class="invalid-feedback" style="display: none"
+        >this input is required</span
+      >
+      <span id="invP" class="invalid-feedback" style="display: none"
+        >con != pass</span
+      >
+      <img src="../../Valid & Not Valid Images/valid.png" style="display: none;width:50px" id="vimg" alt="">
+      <img src="../../Valid & Not Valid Images/notvalid.png" style="display: none;width:50px" id="nvimg" alt="">
+
+      <div>
+        <input type="checkbox" name="agree" /><span>
+          I accept the terms and conditions</span
+        >
+      </div>
+      <input type="submit" />
+    </form>
+    <script src="./script.js"></script>
+  </body>
+</html>

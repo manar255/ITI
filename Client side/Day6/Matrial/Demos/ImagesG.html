@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <img id="img" src="./1.jpg" width="100" height="100" onmouseover="changeImgsDynamic()" onmouseout="stopImg()">
+
+    <script>
+        var imgs = [];
+
+        imgs[0] = './1.jpg';
+        imgs[1] = './2.jpg';
+        imgs[2] = './3.jpg';
+        imgs[3] = './4.jpg';
+
+
+        var counter = 0;
+
+        var interval;
+        function changeImg() {
+
+            var image = document.getElementById("img");
+
+            // image.setAttribute("src","imgs[counter++]")
+            if (counter < 4) {
+                image.src = imgs[counter++];
+                // image.src=imgs[1];
+            }
+            else{
+                counter = 0;
+            }
+        }
+
+        function changeImgsDynamic(){
+          interval= setInterval(changeImg,1000);
+        }
+
+        function stopImg(){
+            clearInterval(interval);
+        }
+    </script>
+</body>
+
+</html>
