@@ -23,7 +23,7 @@ for (let i = 0; i < 5; i++) {
                 document.getElementById(ids[j]).src = '../../Valid & Not Valid Images/fillStar.png';
             }
         }
-    })
+    }) 
 }
 
 
