@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    Name:<input type="text" id="nameInput">
+    Age:<input type="text" id="ageInput">
+    <br>
+    <button onclick="createSession()">Create Session</button>
+    <button onclick="getSession()">Get Session</button>
+    <button onclick="removeSession()">Remove Session</button>
+    <script>
+
+        // create , get , remove
+
+        function createSession() {
+            var name=document.getElementById("nameInput").value;
+            var age=document.getElementById("ageInput").value;
+
+            sessionStorage.setItem("userName", name);
+            sessionStorage.userAge=age;
+        }
+
+        function getSession() {
+
+            if(sessionStorage.userName){
+           var nameval= sessionStorage.getItem("userName");
+           console.log(nameval);
+        }
+
+        if(sessionStorage.userAge){
+           var ageval=sessionStorage.userAge;
+           console.log(ageval);
+        }
+           
+        }
+
+        function removeSession() {
+            sessionStorage.removeItem("userName");
+            sessionStorage.removeItem("userAge");
+        }
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    Name:<input type="text" id="nameInput">
+    Age:<input type="text" id="ageInput">
+    <br>
+    <button onclick="createcookie()">Create cookie</button>
+    <button onclick="getcookie()">Get cookie</button>
+    <button onclick="removecookie()">Remove cookie</button>
+    <script>
+        // cookie
+
+        // create , get , remove
+
+
+        function createcookie() {
+            var name = document.getElementById("nameInput").value;
+            var age = document.getElementById("ageInput").value;
+            var date1 = new Date();
+            var newDate = date1.getDate() + 4;
+
+            date1.setDate(newDate);
+            //    console.log(date1);       
+            document.cookie = "userName=" + name + ";expires=" + date1.toDateString();
+            document.cookie = "userAge=" + age + ";expires=" + date1.toDateString();
+        }
+
+        function getcookie(){
+            // console.log(document.cookie);
+
+            var data=document.cookie;
+            var afterSpilt=data.split(";");
+            // console.log(afterSpilt);
+            var userN=afterSpilt[1].split("=")[1];
+            console.log(userN);
+            var userA=afterSpilt[0].split("=")[1];
+            console.log(userA);
+            
+        }
+
+        function removecookie(){
+
+            var date1=new Date();
+            date1.setDate(date1.getDate()-1);
+            // console.log(date1);
+            document.cookie="userName="+";expires="+date1;
+            document.cookie="userAge="+";expires="+date1;
+            
+        }
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    Name:<input type="text" id="nameInput">
+    Age:<input type="text" id="ageInput">
+    <br>
+    <button onclick="createLocal()">Create Local</button>
+    <button onclick="getLocal()">Get Local</button>
+    <button onclick="removeLocal()">Remove Local</button>
+    <script>
+
+        // create , get , remove
+
+        function createLocal() {
+            var name=document.getElementById("nameInput").value;
+            var age=document.getElementById("ageInput").value;
+
+            localStorage.setItem("userName", name);
+            localStorage.userAge=age;
+        }
+
+        function getLocal() {
+            
+           var nameval= localStorage.getItem("userName");
+           console.log(nameval);
+           var ageval=localStorage.userAge;
+           console.log(ageval);
+           
+        }
+
+        function removeLocal() {
+            localStorage.removeItem("userName");
+            localStorage.removeItem("userAge");
+        }
+    </script>
+
+
+</body>
+
+</html>
