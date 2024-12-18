@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="LocalS"></div>
+    <div id="wel"></div>
+    <script>
+        let creatCookie = (key, value) => {
+            let d = new Date()
+            d.setDate(d.getDate() + 4);
+            console.log(d)
+            return document.cookie = `${key} = ${value} ;expires=`
+        }
+        let getCookie = (key) => {
+
+            let cookies = document.cookie.split(';')
+            for (let i = 0; i < cookies.length; i++) {
+                let cookie = cookies[i].trim().split('=');
+                // console.log(cookie);
+
+                if (cookie[0] == key) {
+                    return cookie[1];
+                }
+            }
+        }
+        let wel = document.getElementById('wel');
+
+        let vt = Number(getCookie('userVisited'))=='Nan'?0:Number(getCookie('userVisited'))+1;
+        creatCookie('userVisited',vt)
+
+        let nameS=`<span style='color:${getCookie('color')}'>${getCookie('userName')}</span>`
+        wel.innerHTML = `<img src='${getCookie('genderimg')}'> welcome ${nameS} you have visited this site ${vt}times`
+
+        let userNameh = document.createElement('h1');
+        userNameh.innerHTML = `User name from local storage => ${localStorage.getItem('userName')}`;
+        document.getElementById('LocalS').appendChild(userNameh);
+    </script>
+</body>
+
+</html>
