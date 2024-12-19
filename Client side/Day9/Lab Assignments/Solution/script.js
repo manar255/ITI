@@ -1,11 +1,12 @@
 function tset() {
-    if (arguments.lengt != 2) {
+    if (arguments.length != 2) {
         let err = new Error('accept only 2 parameters')
         throw err;
     }
     console.log(arguments.length);
 }
 // tset(1);
+tset(2,6);
 
 function add3number() {
     if (arguments.length != 3) {
@@ -53,9 +54,7 @@ function mut(num1, num2) {
 function dev(num1, num2) {
     return num1 / num2;
 }
-function myFunction(x) {
-    console.log(x);
-    
+function myFunction(x) {    
     if (x == '+') {
         fire(sum);
         console.log(555555555);
@@ -76,9 +75,7 @@ function fire(opration) {
     let n1 = Number(document.getElementById('n1').value);
 
     let n2 = Number(document.getElementById('n2').value);
-    console.log(opration);
     let res = opration(n1, n2);
-    console.log(res);
     
     alert(`result =${res}`, );
 
