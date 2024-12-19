@@ -10,6 +10,7 @@
 <body>
     <div id="LocalS"></div>
     <div id="wel"></div>
+    <script src="./script.js"></script>
     <script>
         let creatCookie = (key, value) => {
             let d = new Date()
@@ -29,12 +30,35 @@
                 }
             }
         }
+        let hasCookie = (key) => {
+            let cookies = document.cookie.split(';')
+            for (let i = 0; i < cookies.length; i++) {
+                let cookie = cookies[i].trim().split('=');
+                // console.log(cookie);
+
+                if (cookie[0] == key) {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+
         let wel = document.getElementById('wel');
+        let vt;
+        if(!hasCookie('userVisited'))
+        {
+            creatCookie('userVisited', 1);
+            vt=1
 
-        let vt = Number(getCookie('userVisited'))=='Nan'?0:Number(getCookie('userVisited'))+1;
-        creatCookie('userVisited',vt)
+        }
+        else{
+             vt=Number(getCookie('userVisited')) + 1;
+             creatCookie('userVisited',vt);
+        }
 
-        let nameS=`<span style='color:${getCookie('color')}'>${getCookie('userName')}</span>`
+        
+        let nameS = `<span style='color:${getCookie('color')}'>${getCookie('userName')}</span>`
         wel.innerHTML = `<img src='${getCookie('genderimg')}'> welcome ${nameS} you have visited this site ${vt}times`
 
         let userNameh = document.createElement('h1');

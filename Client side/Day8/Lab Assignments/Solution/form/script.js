@@ -28,7 +28,9 @@ let deleteCookie = (cookieName) => {
     date1.setDate(date1.getDate() - 1);
     document.cookie = cookieName + "=" + ";expires=" + date1;
 }
-deleteCookie('userName');
+// deleteCookie('userVisited');
+// deleteCookie('genderimg');
+// deleteCookie('color');
 
 let getCookies = () => {
 
@@ -61,8 +63,13 @@ let saveData = () => {
     //     isChicked = true;
     // })
     if ( document.getElementById('rme').checked) {
-
-        creatCookie('userName', document.getElementById('name').value)
+        localStorage.setItem("userName",document.getElementById('name').value)
+        document.getElementById('name').value=localStorage.getItem('userName')
+    }
+    else{
+        localStorage.removeItem('userName')
+    }
+    creatCookie('userName', document.getElementById('name').value)
         creatCookie('color', document.getElementById('color').value)
         let gender = document.getElementsByName('gender');
         for (let g of gender) {
@@ -70,8 +77,7 @@ let saveData = () => {
                 creatCookie('genderimg', g.value)
             }
         }
-        localStorage.setItem("userName", document.getElementById('name').value);
-    }
+        // localStorage.setItem("userName", document.getElementById('name').value);
 
 }
 
