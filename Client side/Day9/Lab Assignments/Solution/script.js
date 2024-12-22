@@ -25,10 +25,12 @@ function add3number() {
     return res;
 }
 
-function reverseParameter() {
+ let reverseParameter=()=> {
+    console.log(arguments);
+    
     return Array.from(arguments).reverse();
 }
-// console.log(reverseParameter(1, 2, 3, 4));
+console.log(reverseParameter(1, 2, 3, 4));
 
 function reverseParameterb() {
     let res = [];
