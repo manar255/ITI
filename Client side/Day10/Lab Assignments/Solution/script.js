@@ -68,9 +68,8 @@ p1.name = 'Manar'
 p1.age = 22
 console.log(p1)
 
-let editedPerson = Object.assign(person, { ID: 1, city: 'Qena' })
+let editedPerson = Object.assign(person, { age: 1, city: 'Qena' })
 console.log(editedPerson)
-
 
 /************* define propeties ***********/
 let car = {};
